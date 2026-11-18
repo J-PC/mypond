@@ -28,6 +28,9 @@ pond:
 #  - apps/alex.yml
 
 apps:
+  io.github.block.Goose:
+    repo: aaif-goose/goose
+    assets: "{app_id}_stable_{arch}.flatpak"
   # One entry per app: its app ID, then the repository whose releases hold
   # its .flatpak files.
   #org.example.MyApp:

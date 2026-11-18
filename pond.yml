@@ -1,0 +1,48 @@
+# Pond configuration. Every setting is described in
+# https://github.com/FrogPak/engine/blob/main/docs/configuration.md
+
+pond:
+  title: My Pond                 # shown on the landing page and in software centers
+  subtitle: Apps by me           # optional
+  remote: mypond                 # the name people type: flatpak install mypond <app ID>
+  # Optional settings; remove the # to use one.
+  #arches:                       # architectures to publish (default: x86_64 and aarch64)
+  #  - x86_64                    # 64-bit PCs
+  #  - aarch64                   # 64-bit ARM: phones, Raspberry Pi, ARM laptops
+  #logo-square: assets/logo-square.svg  # recommended: square logo for the browser tab, the remote's icon and badges
+  #logo-square-dark: assets/logo-square-dark.svg  # its version for dark mode
+  #logo-wide: assets/logo-wide.svg  # a logo with the Pond's name in it; replaces the title on the landing page
+  #logo-wide-dark: assets/logo-wide-dark.svg  # its version for dark mode
+  #css: assets/custom.css        # your own stylesheet, loaded after FrogPak's
+  #social-image: assets/social.png  # image for shared links (default: the repo's social preview image)
+  #order: listed                 # app order: listed (default), name, newest or app-id
+  #theme:
+  #  mode: system                # how the page starts: system (default), light or dark
+  #  accent: 1966c2              # colors as hex, without the #
+  #  accent-dark: 78aeed
+  #  background: f6f5f4
+  #  background-dark: 1d1d1d
+
+# Optional: more files of apps, each holding an apps: section like the one below.
+#include:
+#  - apps/alex.yml
+
+apps:
+  # One entry per app: its app ID, then the repository whose releases hold
+  # its .flatpak files.
+  #org.example.MyApp:
+  #  repo: example/myapp  # for GitHub repos
+  #  assets: "{app_id}-{arch}.flatpak"  # Default format (can be omitted)
+  #org.example.Notes:
+  #  repo: https://codeberg.org/alex/notes # Codeberg repos do not need 'forge' set
+  #  assets: "{app_id}.flatpak"
+  #  license: meta  # show only the license in the app's metainfo
+  #org.example.Paint:
+  #  repo: https://forge.example.org/alex/paint
+  #  forge: forgejo
+  #  assets: "{name}-*-{arch}.flatpak"
+  #org.example.Mail:
+  #  repo: https://git.example.org/lisa/mail
+  #  forge: gitea
+  #  assets: "{name}-{arch}-latest.flatpak"
+  #  license: GPL-3.0-or-later  # shown only if neither the forge nor the metainfo states one
